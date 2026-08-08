@@ -20,3 +20,11 @@ module "lambda" {
 
   function_name = "interview-current-time"
 }
+
+module "api_gateway" {
+  source = "./modules/api_gateway"
+
+  api_name             = "interview-time-api"
+  lambda_function_name = module.lambda.function_name
+  lambda_function_arn  = module.lambda.function_arn
+}
