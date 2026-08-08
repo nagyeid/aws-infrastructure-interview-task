@@ -14,3 +14,9 @@ module "ec2" {
 
   instance_type = "t3.micro"
 }
+
+module "lambda" {
+  source = "./modules/lambda"
+
+  function_name = "interview-current-time"
+}
