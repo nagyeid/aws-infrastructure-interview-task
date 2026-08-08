@@ -52,6 +52,7 @@ The infrastructure is deployed into an AWS VPC using Terraform.
 - Route table association
 
 ### Compute
+![AWS Infrastructure Architecture](docs/EC2.png)
 
 An Amazon Linux EC2 instance is deployed as the compute service.
 
@@ -65,7 +66,7 @@ The instance uses Terraform user data to:
 The EC2 instance is exposed through HTTP port 80.
 
 ### Serverless
-
+![AWS Infrastructure Architecture](docs/lambda.png)
 A separate AWS Lambda function provides the current UTC time.
 
 The Lambda function is invoked through an Amazon API Gateway HTTP API.
