@@ -17,3 +17,8 @@ output "ec2_public_ip" {
   description = "Public IP address of the EC2 web server."
   value       = module.ec2.public_ip
 }
+
+output "api_endpoint" {
+  description = "Public API Gateway endpoint for the Lambda function."
+  value       = module.api_gateway.api_endpoint
+}
